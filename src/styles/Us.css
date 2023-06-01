@@ -1,0 +1,27 @@
+.UsContainer {
+  width: 90%;
+  height: auto;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.UsContainer h1{
+    color: #1c374d;
+    align-self: self-start;
+}
+
+.UsContainer p {
+    text-justify:newspaper;
+    margin-bottom: 15%;
+}
+
+.socialMedia svg {
+  cursor: pointer;
+  color: #1c374d;
+  margin: 20px;
+  font-size: 70px;
+  cursor: pointer;
+}
