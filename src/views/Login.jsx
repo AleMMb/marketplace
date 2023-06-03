@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContex } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 import '../styles/Login.css'
@@ -16,18 +17,16 @@ function Login() {
     const field = {};
     field[name] = value;
     setUsuarioLocal({ ...usuario, ...field });
-    console.log (usuario)
   };
 
 
   const iniciarSesion = async () => {
     const urlServer = "http://localhost:3000";
     const endpoint = "/login";
-    const { email, password } = usuario;
+    //const { email, password } = usuario;
     try {
-      if (!email || !password) return alert("Email y password obligatorias");
+      //if (!email || !password) return alert("Email y password obligatorias");
       const { data: token } = await axios.post(urlServer + endpoint, usuario);
-      console.log(token)
       alert("Usuario identificado con éxito");
       localStorage.setItem("token", token);
       setUsuario();
@@ -42,17 +41,17 @@ function Login() {
     <div className='login'>
         <div className='form'>
         <h1>Login</h1>
-        <form>
+      <div>
             <label htmlFor="email">ingrese correo</label>
-            <input name="email" placeholder='Email...' type="text" value={usuario.email || ''}
+            <input name="email" placeholder='email...' type="text" value={usuario.email}
           onChange={handleSetUsuario}/>
 
             <label htmlFor="password">ingrese su contraseña</label>
-            <input name="password" placeholder='contraseña' type="password" value={usuario.password || ''}
+            <input name="password" placeholder='contraseña' type="password" value={usuario.password}
           onChange={handleSetUsuario}/>
 
             <button onClick={iniciarSesion}>Entrar</button>
-        </form>
+        </div>
         </div>
     </div>
   )

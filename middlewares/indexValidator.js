@@ -6,14 +6,14 @@ const token_key = process.env.TOKENKEY
    (distinto a si son válidas o no, tuve que moificar la view Login en el front, porque esa comprobación ya estaba)
    pero igual, creo que se entiende la idea de implementar un middleware :P */
 
-/*const credenciales = (req, res, next) => { 
+const credenciales = (req, res, next) => { 
   const { email, password } = req.body;  
   if (!email || !password) {
     res.status(401).send({ message: "Usuario y contraseña son datos obligatorios." });
     return;
   }
   next();
-};*/
+};
 
 const verificaToken = async (req, res, next) => {
   try {
@@ -36,4 +36,4 @@ const verificaToken = async (req, res, next) => {
 
 
 
-module.exports = { verificaToken}
+module.exports = {credenciales, verificaToken}

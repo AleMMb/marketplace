@@ -1,4 +1,5 @@
-import { useState } from "react";
+import {useContext } from "react";
+import {AuthContex} from '../context/AuthContext'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -6,7 +7,7 @@ import "../styles/SingUpForm.css";
 
 function SingUp() {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const {user, setUser} = useContext(AuthContex);
 
 
   const handleSetUser = ({ target: { value, name } }) => {
@@ -35,7 +36,7 @@ function SingUp() {
         {" "}
         <b>Regístrate </b> y accede a nuestra tienda.
       </p>
-      <form action="">
+      <form>
         <label htmlFor="nombre">Tu nombre </label>
         <input
           name="nombre"
@@ -73,8 +74,7 @@ function SingUp() {
         />
 
 
-        <button 
-        type="submit"
+        <button
         onClick={userRegistrer}
         >Registrarse</button>
       </form>
