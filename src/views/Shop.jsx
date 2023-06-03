@@ -14,7 +14,7 @@ function Shop() {
       </div>
       <div className="products">
         {PRODUCTS.map((product)=>(
-            <Card data={product}/>
+          <li key={product.id} >< Card data={product} /></li>
         ))}
       </div>
     </div>

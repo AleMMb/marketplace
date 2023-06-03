@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { PRODUCTS } from "../../productData";
 
 export const ShopContext = createContext(null);
@@ -39,7 +39,6 @@ export const ShopContextProvider = (props) => {
 
   const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount }
 
-  console.log(cartItems)
 
   return (
     <ShopContext.Provider value={contextValue}>

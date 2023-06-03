@@ -1,3 +1,6 @@
+.Shop{
+  width: 100%;
+}
 .ShopTitle {
   font-family: 'Nothing You Could Do', cursive;
   color: #1C374D;
@@ -8,9 +11,8 @@
 .products {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product {
