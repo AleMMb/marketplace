@@ -2,7 +2,7 @@ const pool = require("../database/connection");
 const bcrypt = require("bcryptjs");
 
 const getUsuario = async (email) => {
-  const consulta = "SELECT * FROM usuarios WHERE email = $1";
+  const consulta = "SELECT * FROM usuario WHERE email = $1";
   const values = [email];
   const { rows: usuario } = await pool.query(consulta, values);
   return usuario;
@@ -10,7 +10,7 @@ const getUsuario = async (email) => {
 
 const verificarCredenciales = async (email, password) => {
   const values = [email];
-  const consulta = "SELECT * FROM usuarios WHERE email = $1";
+  const consulta = "SELECT * FROM usuario WHERE email = $1";
   const {
     rows: [usuario],
     rowCount,
@@ -30,7 +30,7 @@ const registrarUsuario = async (usuario) => {
   const passwordEncriptada = bcrypt.hashSync(password);
   password = passwordEncriptada;
   const values = [nombre, apellido, email, passwordEncriptada];
-  const consulta = "INSERT INTO usuarios values (DEFAULT, $1, $2, $3, $4)";
+  const consulta = "INSERT INTO usuario values (DEFAULT, $1, $2, $3, $4)";
   await pool.query(consulta, values);
 };
 

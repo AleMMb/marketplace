@@ -1,10 +1,10 @@
 .SinghUp-container{
-    background-image: url("https://images.unsplash.com/photo-1516528387618-afa90b13e000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-image: url("https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height: max-content;
-    background-size:99cqmax;
     height: 100vh;
-    background-repeat:no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

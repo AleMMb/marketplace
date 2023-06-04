@@ -10,7 +10,7 @@ function SingUp() {
   const {user, setUser} = useContext(AuthContex);
 
 
-  const handleSetUser = ({ target: { value, name } }) => {
+  const handleSetUser = ({ target: { value, name }}) => {
     const field = {};
     field[name] = value;
     setUser({ ...user, ...field });
@@ -19,8 +19,10 @@ function SingUp() {
   const userRegistrer = async () => {
     const urlServer = "http://localhost:3000";
     const endpoint = "/usuarios";
+    console.log('no pasa')
     try {
       await axios.post(urlServer + endpoint, user);
+      console.log('pasa')
       alert("Usuario registrado con éxito")
       navigate("/login")
     } catch (error) {
@@ -37,7 +39,7 @@ function SingUp() {
         <b>Regístrate </b> y accede a nuestra tienda.
       </p>
       <form>
-        <label htmlFor="nombre">Tu nombre </label>
+        <label>Tu nombre </label>
         <input
           name="nombre"
           placeholder="nombre"
@@ -46,7 +48,7 @@ function SingUp() {
           onChange={handleSetUser}
         />
 
-        <label htmlFor="apellido">Tu apellido </label>
+        <label>Tu apellido </label>
         <input
           name="apellido"
           placeholder="apellido"
@@ -55,7 +57,7 @@ function SingUp() {
           onChange={handleSetUser}
         />
 
-        <label htmlFor="email">Correo Electronico</label>
+        <label>Correo Electronico</label>
         <input
           name="email"
           placeholder="Email"
@@ -64,7 +66,7 @@ function SingUp() {
           onChange={handleSetUser}
         />
 
-        <label htmlFor="password">Crea una contraseña</label>
+        <label>Crea una contraseña</label>
         <input
           name="password"
           placeholder="contraseña"
@@ -74,7 +76,7 @@ function SingUp() {
         />
 
 
-        <button
+        <button type="Reset" value="Borrar todo"
         onClick={userRegistrer}
         >Registrarse</button>
       </form>

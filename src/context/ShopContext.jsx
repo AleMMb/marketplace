@@ -3,6 +3,22 @@ import { PRODUCTS } from "../../productData";
 
 export const ShopContext = createContext(null);
 
+const getProductos = async ()=>{
+
+  const urlServer = "http://localhost:3000";
+  const endpoint = "/shop";
+  try {
+    const response = await fetch(urlServer + endpoint)
+    const productos = await response.json();
+    console.log(productos) 
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+/*getProductos()*/
+
+
 const getDefaultCart = () => {
   let cart = {};
   for (let i = 1; i < PRODUCTS.length + 1; i++) {
@@ -13,6 +29,7 @@ const getDefaultCart = () => {
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));

@@ -2,6 +2,7 @@ const express = require ('express')
 const cors = require("cors")
 const app = express()
 const indexRoutes = require('./routes/indexRoutes')
+const productRoutes = require ('./routes/productRoutes')
 
 
 
@@ -15,3 +16,4 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static('public'))
 app.use('/', indexRoutes)
+app.use('/', productRoutes)

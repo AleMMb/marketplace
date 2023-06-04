@@ -1,11 +1,11 @@
 .SinghUp-form {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  background-color: white;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
+  background:rgba(57, 50, 9, 0.174);
 }
 
 .SinghUp-form b {
@@ -16,10 +16,31 @@
   color: #1c374d;
 }
 
+.SinghUp-form p {
+  font-size:x-large;
+}
+
 form {
+  color: #1c374d;
   display: flex;
   flex-direction: column;
   width: 80%;
   height: auto;
   padding: 30px;
+}
+
+input{
+  background:rgba(235, 241, 235, 0.644);
+}
+
+
+
+form label{
+  font-size: medium;
+  color: whitesmoke;
+}
+input::placeholder,
+textarea::placeholder {
+  font-weight: lighter;
+  color: #1c374d;
 }
