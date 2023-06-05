@@ -17,15 +17,43 @@ CREATE TABLE producto (
     nombre VARCHAR (70) NOT NULL,
     descripcion TEXT NOT NULL,
     precio INT NOT NULL,
-    imagen VARCHAR (150) NOT NULL,
+    imagen VARCHAR (150) NOT NULL,   /*cambiar a muchos*/
     CONSTRAINT fk_productos_usuario FOREIGN KEY (id_usuario) REFERENCES usuario (id)
 );
 
 INSERT INTO producto VALUES(
     1,
     3,
-    'Camiseta Azul',
-    'Camiseta Azul en color azul y negro',
-    100,
-    'https://i.ibb.co/VcYym0s/camiseta-azul.jpg'
+    'Animal',
+    'Aro animal print en color beige y negro',
+    10000,
+    'https://acortar.link/WSPCmI'
+);
+
+INSERT INTO producto VALUES(
+    2,
+    3,
+    'flores',
+    'Diseño floreado primaveral',
+    3500,
+    'https://acortar.link/NZyrK3'
+);
+
+
+INSERT INTO producto VALUES(
+    3,
+    2,
+    'aro',
+    'aro en color rojo y negro',
+    7990,
+    'https://acortar.link/W0qjGr'
+);
+
+INSERT INTO producto VALUES(
+    4,
+    2,
+    'Catus, pinchosus',
+    'Los cactus estan de moda',
+    7990,
+    'https://acortar.link/vQn4rw'
 );

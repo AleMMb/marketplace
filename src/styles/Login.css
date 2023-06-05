@@ -1,17 +1,29 @@
 
 .login{
+width: 50%;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+border-radius: 15px;
+padding-bottom: 20px;
+margin-top: 10%;
+margin-left: 25%;
 display: flex;
 justify-content: center;
-
 }
-.form {
-  width: 50%;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  margin-top: 10%;
+
+.form-login {
+  width: 80%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.low-div{
+  width: 70%;
+  display: flex;
+flex-direction: column;
+
+align-items: center;
 }
 
 .login h1 {
@@ -19,38 +31,18 @@ justify-content: center;
   color: #1c374d;
 }
 
-form input {
+.low-div  input {
   height: 40px;
   width: 80%;
+  margin-bottom: 10px;
   border: none;
   border-bottom: 1px solid #121619;
-  color: black;
+  color: #1c374d;
+  background-color: white;
 }
 
-form textarea {
-  margin-top: 15px;
-  height: 70px;
-  width: 80%;
-  border: none;
-  border-bottom: 1px solid #121619;
-  color: black;
-}
-input::placeholder,
-textarea::placeholder {
-  font-weight: bold;
-  color: black;
-}
-form input:focus,
-textarea:focus {
-  outline: none;
-}
 
-form label {
-  margin-top: 15px;
-  color: grey;
-}
-
-form button {
+button {
   margin-top: 40px;
   width: 140px;
   height: 40px;

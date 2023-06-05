@@ -33,7 +33,6 @@ function SingUp() {
 
   return (
     <div className="SinghUp-form">
-      <h1> ¿Nuevo Acá? </h1>
       <p>
         {" "}
         <b>Regístrate </b> y accede a nuestra tienda.

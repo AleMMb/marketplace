@@ -1,21 +1,25 @@
-import React from "react";
-import { Link } from 'react-router-dom'
+import { useContext } from 'react';
+import { ShopContext } from '../context/ShopContext';
 
-import {PRODUCTS} from "../../productData.js"
 import Card from "../components/Card.jsx";
 
 import "../styles/Shop.css";
 
+
+
+
 function Shop() {
+  const {productsList} = useContext(ShopContext)
+
   return (
     <div className="Shop">
       <div className="ShopTitle">
         <h1>Productos para ti</h1>
       </div>
       <div className="products">
-        {PRODUCTS.map((product)=>(
+        {productsList.map((product)=>(
           <li key={product.id} >< Card data={product} /></li>
-        ))}
+         ))}
       </div>
     </div>
   );

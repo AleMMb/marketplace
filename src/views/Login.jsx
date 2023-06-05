@@ -39,9 +39,9 @@ function Login() {
 
   return (
     <div className='login'>
-        <div className='form'>
+        <div className='form-login'>
         <h1>Login</h1>
-      <div>
+      <div className="low-div">
             <label htmlFor="email">ingrese correo</label>
             <input name="email" placeholder='email...' type="text" value={usuario.email}
           onChange={handleSetUsuario}/>

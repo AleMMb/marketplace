@@ -1,23 +1,9 @@
-import React, { createContext, useState } from "react";
-import { PRODUCTS } from "../../productData";
+import React, { createContext, useState, useEffect } from "react";
+
 
 export const ShopContext = createContext(null);
 
-const getProductos = async ()=>{
-
-  const urlServer = "http://localhost:3000";
-  const endpoint = "/shop";
-  try {
-    const response = await fetch(urlServer + endpoint)
-    const productos = await response.json();
-    console.log(productos) 
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-/*getProductos()*/
-
+let PRODUCTS = [{},{},{},{}]
 
 const getDefaultCart = () => {
   let cart = {};
@@ -27,8 +13,28 @@ const getDefaultCart = () => {
   return cart;
 };
 
+
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [productsList, setProductsList] = useState([])
+
+  const getProductos = async ()=>{
+
+    const urlServer = "http://localhost:3000";
+    const endpoint = "/shop";
+    try {
+      const response = await fetch(urlServer + endpoint)
+      const productos = await response.json();
+      setProductsList (productos) 
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
+  useEffect(()=>{
+    getProductos()
+    },[])
 
 
   const addToCart = (itemId) => {
@@ -47,14 +53,14 @@ export const ShopContextProvider = (props) => {
     let totalAmount = 0;
     for (const item in cartItems){
       if (cartItems[item] > 0 ){
-        let itemInfo = PRODUCTS.find((product) => product.id === Number(item))
-        totalAmount += cartItems[item] * itemInfo.price
+        let itemInfo = productsList.find((product) => product.id === Number(item))
+        totalAmount += cartItems[item] * itemInfo.precio
       }
     }
     return totalAmount
   }
 
-  const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount }
+  const contextValue = { cartItems, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount, productsList, setProductsList}
 
 
   return (
