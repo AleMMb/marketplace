@@ -13,7 +13,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE producto (
     id SERIAL PRIMARY KEY NOT NULL,
-    id_usuario SERIAL,
+    id_usuario SERIAL, /*pendiente*/
     nombre VARCHAR (70) NOT NULL,
     descripcion TEXT NOT NULL,
     precio INT NOT NULL,
