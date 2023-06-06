@@ -3,11 +3,19 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const ShopContext = createContext(null);
 
-let PRODUCTS = [{},{},{},{}]
+let PRODUCTS = [{},{},{},{},{},{}]  
+/*quiero crear un arreglo para tener un carrito por defecto y poder sumar y restar items,
+ debería recorrer productsList, pero no tengo acceso a ella desde afuera, 
+ y cuando meto la función (getDefaultCart) dentro del provider y reemplazo PRODUCTS por productsList
+ luego las funciones no me funcionan
+y  retorna un NaN ¬¬
+pero ahora así como lo tengo funcionan... tendría que dejar esto estático (lo cual no es la idea)
+o dejar PRODUCTOS muy muy muy largo... 
+se me fundió el cerebro, intenté hasta que me estresé...  Mati ayuda plis u.u */
 
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < PRODUCTS.length + 1; i++) {
+  for (let i = 1; i < PRODUCTS.length + 1; i++) {  
     cart[i] = 0;
   }
   return cart;
@@ -31,7 +39,7 @@ export const ShopContextProvider = (props) => {
     }
   }
 
-
+console.log(productsList)
   useEffect(()=>{
     getProductos()
     },[])
