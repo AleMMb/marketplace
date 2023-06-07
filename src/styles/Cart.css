@@ -5,6 +5,15 @@
   align-items: center;
 }
 
+.cart-title{
+  font-family: 'Nothing You Could Do', cursive;
+  color: #948e52;
+  font-size: 1.6rem;
+  text-align: center;
+
+
+}
+
 .cart-2 {
   width: 100%;
   display: flex;

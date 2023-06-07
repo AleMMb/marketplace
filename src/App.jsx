@@ -1,7 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {ShopContextProvider} from './context/ShopContext'
-import {AuthContextProvider} from './context/AuthContext'
+import {ShopContextProvider} from "./context/ShopContext"
+import {AuthContextProvider} from "./context/AuthContext"
+import {Private} from "../src/helpers/Private"
 
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
@@ -31,7 +32,7 @@ function App() {
             <Route path="/carrito" element={<Cart />} />
             <Route path="/registro" element={<SingUp />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/perfil" element={<Private><Dashboard /></Private>}></Route>
             <Route path="*" element={<h1>Pagina no encontrada</h1>}/>
           </Routes>
           </ShopContextProvider>

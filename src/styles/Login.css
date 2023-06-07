@@ -53,3 +53,13 @@ button {
   font-size: 15px;
   cursor: pointer;
 }
+
+.swal2-popup{
+  background-color: whitesmoke;
+  color: #1c374d;
+}
+
+
+.swal2-confirm {
+  background-color: #1c374d !important;
+}

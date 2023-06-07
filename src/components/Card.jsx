@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext';
 
+import '../styles/Card.css'
+
 
 
 function Card (props){
@@ -10,11 +12,11 @@ function Card (props){
 
 
   return (
-    <div className='product'>
+    <div className='product-card'>
         <img src={imagen}/>
         <div className='description'>
-            <p><b>{nombre}</b></p>
-            <p>${precio}</p>
+            <p className='product-title'>{nombre}</p>
+            <p className='product-price'>${precio}</p>
         </div>
         <button className='addToCartBttn' onClick={()=> addToCart(id)}>Carrito
         {cartItemCount > 0 && <> ({cartItemCount})</>}
