@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const {
   getUsuario,
+  getUsuarioID,
   registrarUsuario,
   verificarCredenciales,
 } = require("../services/user.services");
@@ -35,6 +36,17 @@ const indexController = {
       await verificarCredenciales(email, password);
       const token = jwt.sign({ email }, token_key); //  {expriresIn: 68400} duracion de 24hrs
       res.send(token);
+    } catch (error) {
+      console.log(error);
+      res.status(error.code || 500).send(error.message);
+    }
+  },
+
+  mostrarPorID: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const usuario = await getUsuarioID(id);
+      res.status(200).send(usuario);
     } catch (error) {
       console.log(error);
       res.status(error.code || 500).send(error.message);

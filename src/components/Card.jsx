@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext';
-
+import { Link } from "react-router-dom";
 import '../styles/Card.css'
 
 
@@ -13,7 +13,7 @@ function Card (props){
 
   return (
     <div className='product-card'>
-        <img src={imagen}/>
+        <Link to={"/descripcion"}><img src={imagen}/></Link>
         <div className='description'>
             <p className='product-title'>{nombre}</p>
             <p className='product-price'>${precio}</p>

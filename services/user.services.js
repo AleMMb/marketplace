@@ -34,4 +34,11 @@ const registrarUsuario = async (usuario) => {
   await pool.query(consulta, values);
 };
 
-module.exports = { getUsuario, registrarUsuario, verificarCredenciales };
+const getUsuarioID = async (id) =>{
+  const consulta =  "SELECT * FROM usuario WHERE id = $1"
+  const values = [id]
+  const { rows: usuario } = await pool.query(consulta, values);
+  return usuario
+}
+
+module.exports = {getUsuarioID, getUsuario, registrarUsuario, verificarCredenciales };

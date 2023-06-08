@@ -39,7 +39,7 @@ export const ShopContextProvider = (props) => {
     }
   }
 
-console.log(productsList)
+//console.log(productsList)
   useEffect(()=>{
     getProductos()
     },[])

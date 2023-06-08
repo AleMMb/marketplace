@@ -8,7 +8,7 @@ const {
 
 const {reporteLogin, reporteUsuarioCreado }= require("../middlewares/indexReports");
 const router = express.Router();
-
+router.get("/usuario/:id", indexController.mostrarPorID);
 router.get("/usuarios", verificaToken, indexController.mostrar);
 router.post("/usuarios", reporteUsuarioCreado, indexController.crear);
 router.post("/login", credenciales, reporteLogin, indexController.login);

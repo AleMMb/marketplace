@@ -5,9 +5,9 @@ import { ShopContext } from '../context/ShopContext';
 export const CartItem = (props) => {
     const { id, nombre, precio, imagen} = props.data
 
-    console.log(id) //recibe el id correctamente... 
+    //console.log(id) //recibe el id correctamente... 
     const {cartItems, addToCart, removeFromCart, updateCartItemCount} = useContext (ShopContext);
-    console.log(cartItems)
+    //console.log(cartItems)
   return (
     <div className='cartItem'>
         <img src={imagen} alt="producto" />

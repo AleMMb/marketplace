@@ -12,6 +12,7 @@ import Us from "./views/Us";
 import Login from "./views/Login";
 import Dashboard from "./views/dashboard";
 import SingUp from "./views/SingUp";
+import DesProduct from "./views/DesProduct";
 
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/descripcion" element={ <DesProduct/>} />
             <Route path="/nosotros" element={<Us />} />
             <Route path="/carrito" element={<Cart />} />
             <Route path="/registro" element={<SingUp />} />
