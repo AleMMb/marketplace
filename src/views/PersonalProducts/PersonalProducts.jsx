@@ -6,6 +6,7 @@ import CardPersonalProducts from "../components/CardPersonalProducts"
 
 
 
+
 const PersonalProducts = () => {
     const {usuario} = useContext(AuthContex)
 
@@ -33,8 +34,8 @@ const PersonalProducts = () => {
 
   return (
     <>
-    <div><h1>Mis Productos</h1></div>
-    <div>
+    <h1>Mis Productos</h1>
+    <div className="">
         {products.map((product)=>(
           <li key={product.id} >< CardPersonalProducts data={product} /></li>
          ))}
