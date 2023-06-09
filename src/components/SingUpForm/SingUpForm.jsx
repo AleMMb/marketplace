@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from 'sweetalert2'
 
-import "../styles/SingUpForm.css";
+import "../SingUpForm/SingUpForm.css";
 
 function SingUp() {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ function SingUp() {
   };
 
   return (
-    <div className="SinghUp-form">
+    <div className="SingUp-form">
       <p>
         {" "}
         <b>Regístrate </b> y accede a nuestra tienda.
