@@ -1,30 +1,20 @@
-.Shop{
+.Shop {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .ShopTitle {
-  font-family: 'Nothing You Could Do', cursive;
-  color: #1C374D;
+  font-family: "Nothing You Could Do", cursive;
+  color: #1c374d;
   margin-top: 100px;
   text-align: center;
   font-size: 40px;
 }
 .products {
-  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-}
-
-.product {
-  background-color: #B1A961;
-  border-radius: 15px;
-  width: 300px;
-  height: 450px;
-  margin: 100px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .product img {
@@ -43,7 +33,7 @@
 
 .addToCartBttn {
   background-color: transparent;
-  border: 2px solid rgb(19, 19, 19);
+  border: 2px solid #1c374d;
   min-width: 100px;
   padding-left: 10px;
   padding-right: 10px;
@@ -53,7 +43,7 @@
 }
 
 .addToCartBttn:hover {
-  background-color: rgb(19, 19, 19);
+  background-color: #1c374d;
   color: white;
   cursor: pointer;
 }

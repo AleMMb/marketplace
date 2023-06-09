@@ -11,7 +11,7 @@ export const AuthContextProvider = ({children}) => {
     const [user, setUser] = useState({});
 
 
-  const data={
+  const values={
     usuario,
     setUsuario,
     user,
@@ -21,7 +21,7 @@ export const AuthContextProvider = ({children}) => {
 
   return (
     <div>
-      <AuthContex.Provider value={data}>
+      <AuthContex.Provider value={values}>
         {children}
       </AuthContex.Provider>
     </div>

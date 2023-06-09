@@ -9,6 +9,14 @@ const getProductos = async () => {
     return productos
 };
 
+const getProductsByUser = async (id_usuario) =>{
+    const consulta = "SELECT * FROM producto WHERE id_usuario = $1 ORDER BY id DESC"
+    values = [id_usuario]
+    const {rows: productos} = await pool.query(consulta, values)
+    return productos
+}
+
+
 const getProducto = async (id) =>{
     const consulta = "SELECT * FROM producto WHERE id = $1"
     values = [id]
@@ -30,4 +38,4 @@ const deleteProduct = async (id) => {
     const result = await pool.query (consulta, values)
 }
 
-module.exports = { getProductos, getProducto, addProduct, deleteProduct };
+module.exports = { getProductos, getProducto, addProduct, deleteProduct, getProductsByUser };

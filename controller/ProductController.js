@@ -3,6 +3,7 @@ const {
   getProducto,
   addProduct,
   deleteProduct,
+  getProductsByUser
 } = require("../services/products.services");
 
 const productController = {
@@ -23,6 +24,16 @@ const productController = {
       } catch (error) {
         res.estatus(error.code || 500).send(error.message)
       }
+  },
+
+  traerPorUsuario: async (req, res)=> {
+    try{
+      const id_usuario = req.params.id_usuario
+      const productos = await getProductsByUser(id_usuario)
+      res.status(200).send(productos)
+      }catch(error){
+        res.status(error.code || 500).send(error.message)
+    }
   },
 
   agregar: async (req, res) => {

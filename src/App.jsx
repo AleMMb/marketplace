@@ -13,6 +13,7 @@ import Login from "./views/Login";
 import Dashboard from "./views/dashboard";
 import SingUp from "./views/SingUp";
 import DesProduct from "./views/DesProduct";
+import PersonalProducts from "./views/PersonalProducts"
 
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/registro" element={<SingUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/perfil" element={<Private><Dashboard /></Private>}></Route>
+            <Route path="/misproductos" element={<Private><PersonalProducts /></Private>}></Route>
             <Route path="*" element={<h1>Pagina no encontrada</h1>}/>
           </Routes>
           </ShopContextProvider>

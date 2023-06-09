@@ -6,8 +6,7 @@ import { CartItem } from "../components/Cart-item";
 import "../styles/Cart.css";
 
 function Cart() {
-  const { cartItems, getTotalCartAmount, productsList } =
-    useContext(ShopContext);
+  const { cartItems, getTotalCartAmount, productsList } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
 

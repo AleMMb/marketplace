@@ -33,18 +33,16 @@ function Login() {
         icon: 'error',
         title: 'No se puede iniciar sessión.',
         text: 'Email y password obligatorias',
-        popup: 'swal2-hide',
         backdrop: 'swal2-backdrop-hide',
         background: '#b1a961',
         color: '#1C374D'
     })
       )
-      //alert("Email y password obligatorias");
       const { data: token } = await axios.post(urlServer + endpoint, usuario);
       localStorage.setItem("token", token);
       setUsuario(true);
       Swal.fire({
-        title: 'Bienvenido',
+        title:  `Bienvenido ${usuario.email}`,
         icon: 'success',
         showClass: {
           popup: 'animate__animated animate__fadeInDown'
@@ -59,12 +57,10 @@ function Login() {
         icon: 'error',
         title: 'Oops...',
         text: 'Algo salió mal, contraseña inválida',
-        popup: 'swal2-hide',
         backdrop: 'swal2-backdrop-hide',
         background: '#b1a961',
         color: '#1C374D'
     })
-      //alert(" Algo salió mal, intenta nuevamente");
       console.log(error);
     }
   };

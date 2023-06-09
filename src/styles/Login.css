@@ -41,6 +41,10 @@ align-items: center;
   background-color: white;
 }
 
+.low-div label{
+  color: gray;
+}
+
 
 button {
   margin-top: 40px;

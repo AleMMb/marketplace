@@ -7,6 +7,7 @@
   width: 50%;
   align-items: center;
   background:rgba(177, 169, 97, 0.66);
+  color: #1c374d;
 }
 
 .SinghUp-form b {
@@ -36,15 +37,16 @@ input{
   border: none;
   border-bottom: 1px solid #1c374d;
   font-weight: lighter;
-  margin: 8px;
+  margin: 10px;
+  font-style: italic;
 
 }
 
 
 
-form label{
+.SinghUp-form label{
   font-size:larger;
-  color: #ffffff;
+  color: #1c374d;
   font-weight:300;
 
 }
@@ -53,5 +55,5 @@ form label{
 input::placeholder,
 textarea::placeholder {
   font-weight: lighter;
-  color: #1c374d;
+  color: gray;
 }

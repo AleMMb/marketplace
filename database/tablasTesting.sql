@@ -50,8 +50,8 @@ INSERT INTO producto VALUES(
 );
 
 INSERT INTO producto VALUES(
-    4,
-    2,
+    8,
+    1,
     'Catus, pinchosus',
     'Los cactus estan de moda',
     7990,

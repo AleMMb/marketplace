@@ -14,7 +14,6 @@ export const Private = ({ children }) => {
         icon: 'info',
         title: 'Oops...',
         text: 'Es necesario iniciar session para acceder a esa página!',
-        popup: 'swal2-hide',
         backdrop: 'swal2-backdrop-hide',
         background: '#b1a961',
         color: '#1C374D'

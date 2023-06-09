@@ -9,7 +9,7 @@ import '../styles/Dashboard.css'
 import { useState } from 'react';
 
 function Dashboard() {
-  const [mostrar, setMostrar] = useState({})
+const [mostrar, setMostrar] = useState({})
 
   return (
     <div className="dashboard">

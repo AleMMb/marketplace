@@ -2,6 +2,7 @@ import {useContext } from "react";
 import {AuthContex} from '../context/AuthContext'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 import "../styles/SingUpForm.css";
 
@@ -19,14 +20,43 @@ function SingUp() {
   const userRegistrer = async () => {
     const urlServer = "http://localhost:3000";
     const endpoint = "/usuarios";
-    console.log('no pasa')
     try {
+      if ( !user.nombre || !user.apellido || !user.email || !user.password)
+      return (
+        Swal.fire({
+          icon: 'error',
+          title: 'Ojo!',
+          text: 'Todos los campos son obligatorios',
+          backdrop: 'swal2-backdrop-hide',
+          background: '#b1a961',
+          color: '#1C374D'
+      })
+      )
       await axios.post(urlServer + endpoint, user);
-      console.log('pasa')
-      alert("Usuario registrado con éxito")
+      Swal.fire({
+        icon: 'success',
+        title: 'Maravilloso!',
+        text: 'Te has resgistrado correctamente, ya puedes iniciar sesión',
+        backdrop: 'swal2-backdrop-hide',
+        background: '#b1a961',
+        color: '#1C374D'
+    })
       navigate("/login")
     } catch (error) {
-      alert("Algo salió mal ...");
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR',
+        text: 'Algo salió mal por nuetra parte, intenta nuevamente más tarde',
+        backdrop: 'swal2-backdrop-hide',
+        background: '#b1a961',
+        color: '#1C374D'
+    })
+
+
+
+
+
+      //alert("Algo salió mal ...");
       console.log(error);
     }
   };
@@ -84,7 +114,3 @@ function SingUp() {
 }
 
 export default SingUp;
-
-
-/*disabled={
-  (user.nombre !== "" && user.apellido !== "" && user.email !== "" && user.password !== "") ? false : true}*/

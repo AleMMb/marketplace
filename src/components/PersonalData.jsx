@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContex } from "../context/AuthContext";
+import '../styles/PersonalData.css'
 import axios from "axios";
 
 function PersonalData() {
@@ -21,7 +22,6 @@ function PersonalData() {
     }
   };
  
-  console.log(usuario);
 
   useEffect(() => {
     getUserData();
@@ -31,10 +31,11 @@ function PersonalData() {
     <div className="personal-data">
       <h3>Datos Personales</h3>
       <div>
-        <p>Nombre: {usuario.nombre}</p>
-        <p>Apellido: {usuario.apellido}</p>
-        <p>Correo Electronico: {usuario.email}</p>
-        <button>editar</button>
+        <p> <b>Nombre:</b> {usuario.nombre}</p>
+        <p> <b>Apellido:</b> {usuario.apellido}</p>
+        <p> <b>Correo Electronico:</b> {usuario.email}</p>
+        <div className="button-container">
+        <button>editar</button></div>
       </div>
     </div>
   );
