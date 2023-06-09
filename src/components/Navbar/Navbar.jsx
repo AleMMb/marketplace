@@ -4,9 +4,9 @@ import ReorderIcon from "@mui/icons-material/Reorder";
 import Person3Icon from "@mui/icons-material/Person3";
 import Swal from "sweetalert2";
 
-import logo from "../assets/penguinlogo.svg";
-import "../styles/navbar.css";
-import { AuthContex } from "../context/AuthContext";
+import logo from "../../assets/penguinlogo.svg";
+import "../Navbar/Navbar.css";
+import { AuthContex } from "../../context/AuthContext";
 
 function Navbar() {
   const { usuario, setUsuario } = useContext(AuthContex);

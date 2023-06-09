@@ -4,16 +4,16 @@ import {ShopContextProvider} from "./context/ShopContext"
 import {AuthContextProvider} from "./context/AuthContext"
 import {Private} from "../src/helpers/Private"
 
-import Navbar from "./components/Navbar";
-import Home from "./views/Home";
-import Shop from "./views/Shop";
-import Cart from "./views/Cart";
-import Us from "./views/Us";
-import Login from "./views/Login";
-import Dashboard from "./views/dashboard";
-import SingUp from "./views/SingUp";
-import DesProduct from "./views/DesProduct";
-import PersonalProducts from "./views/PersonalProducts"
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./views/Home/Home";
+import Shop from "./views/Shop/Shop";
+import Cart from "./views/Cart/Cart";
+import Us from "./views/Us/Us";
+import Login from "./views/Login/Login";
+import Dashboard from "./views/dashboard/Dashboard";
+import SingUp from "./views/SingUp/SingUp";
+import DesProduct from "./views/DesProduct/DesProduct";
+import PersonalProducts from "./views/PersonalProducts/PersonalProducts"
 
 
 

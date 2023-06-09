@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { ShopContext } from '../context/ShopContext';
+import { ShopContext } from '../../context/ShopContext';
 
-import Card from "../components/Card.jsx";
+import Card from "../../components/Card/Card";
 
-import "../styles/Shop.css";
+import "../Shop/Shop.css";
 
 
 

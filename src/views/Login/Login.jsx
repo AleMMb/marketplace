@@ -1,12 +1,12 @@
 import { useState, useContext } from "react";
-import { AuthContex } from "../context/AuthContext";
+import { AuthContex } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import 'animate.css'
 
 import axios from "axios";
 
-import '../styles/Login.css'
+import '../Login/Login.css'
 
 
 function Login() {

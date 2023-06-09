@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import '../styles/Home.css'
-import hero from '../assets/HEROclay.jpg'
-import Footer from '../components/Footer'
+import '../Home/Home.css'
+import hero from '../../assets/HEROclay.jpg'
+import Footer from "../../components/Footer/Footer"
 
 function Home() {
   return (

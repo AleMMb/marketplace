@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ShopContext } from "../context/ShopContext";
-import { CartItem } from "../components/Cart-item";
-import "../styles/Cart.css";
+import { ShopContext } from "../../context/ShopContext";
+import { CartItem } from "../../components/Card-item/Cart-item";
+import "../Cart/Cart.css";
 
 function Cart() {
   const { cartItems, getTotalCartAmount, productsList } = useContext(ShopContext);

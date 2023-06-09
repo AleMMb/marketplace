@@ -1,4 +1,4 @@
-import "../styles/CardPersonalProducts.css"
+import "../CardPersonalProducts/CardPersonalProducts.css"
 
 const CardPersonalProducts = (info) => {
     const {nombre, descripcion, precio, imagen} = info.data

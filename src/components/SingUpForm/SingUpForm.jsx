@@ -1,5 +1,5 @@
 import {useContext } from "react";
-import {AuthContex} from '../context/AuthContext'
+import {AuthContex} from '../../context/AuthContext'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from 'sweetalert2'

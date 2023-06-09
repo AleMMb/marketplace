@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Us.css'
+import "../Us/Us.css"
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';

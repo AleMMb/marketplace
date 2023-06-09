@@ -1,5 +1,6 @@
-import '../styles/SingUp.css'
-import SingUpForm from '../components/SingUpForm';
+import '../SingUp/SingUp.css'
+import SingUpForm from '../SingUp/SingUp';
+
 
 function SingUp() {
   return (

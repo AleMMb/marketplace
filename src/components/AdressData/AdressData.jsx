@@ -1,4 +1,4 @@
-import "../styles/AdressData.css"
+import "../AdressData/AdressData.css"
 
 function AdressData() {
   return (

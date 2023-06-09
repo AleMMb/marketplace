@@ -1,11 +1,11 @@
 import Avatar from '@mui/material/Avatar';
-import product9 from  '../assets/9.jpg'
+import product9 from  "../../assets/9.jpg"
 import { Link } from 'react-router-dom';
 
-import PersonalData from '../components/PersonalData';
-import AdressData from  '../components/AdressData'
+import PersonalData from '../../components/PersonalData/PersonalData';
+import AdressData from  '../../components/AdressData/AdressData'
 
-import '../styles/Dashboard.css'
+import '../Dashboard/Dashboard.css'
 import { useState } from 'react';
 
 function Dashboard() {

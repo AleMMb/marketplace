@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
-import { AuthContex } from "../context/AuthContext";
-import '../styles/PersonalData.css'
+import { AuthContex } from "../../context/AuthContext";
+import "../PersonalData/PersonalData.css"
 import axios from "axios";
 
 function PersonalData() {

@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from "react";
-import { AuthContex } from "../context/AuthContext";
+import { AuthContex } from "../../context/AuthContext";
 import axios from "axios";
 
-import CardPersonalProducts from "../components/CardPersonalProducts"
+import CardPersonalProducts from "../../components/CardPersonalProducts/CardPersonalProducts"
 
 
 
