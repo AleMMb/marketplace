@@ -13,11 +13,11 @@ CREATE TABLE usuario (
 
 CREATE TABLE producto (
     id SERIAL PRIMARY KEY NOT NULL,
-    id_usuario SERIAL, /*pendiente*/
+    id_usuario SERIAL, 
     nombre VARCHAR (70) NOT NULL,
     descripcion TEXT NOT NULL,
     precio INT NOT NULL,
-    imagen VARCHAR (150) NOT NULL,   /*cambiar a muchos*/
+    imagen VARCHAR (6000) NOT NULL, 
     CONSTRAINT fk_productos_usuario FOREIGN KEY (id_usuario) REFERENCES usuario (id)
 );
 
@@ -43,7 +43,7 @@ INSERT INTO producto VALUES(
 INSERT INTO producto VALUES(
     3,
     2,
-    'aro',
+    'verano',
     'aro en color rojo y negro',
     7990,
     'https://acortar.link/W0qjGr'
