@@ -7,14 +7,15 @@ const CardPersonalProducts = (info) => {
   const { id, nombre, descripcion, precio, imagen } = info.data;
 
   const deletProduct = async (id) => {
-    const urlServer = "http://localhost:3000";
-    const endpoint = "/producto/";
+    const urlServer = "http://localhost:3000/producto/";
     try {
-      const response = await axios.delete(urlServer + endpoint + id);
+      const consulta  = await axios.delete(urlServer + id);
+      console.log(consulta)
       alert(`el producto con nombre ${nombre} ha sido elinimado exitosamente`);
     } catch (error) {
       console.log(error);
     }
+    return
   };
 
   return (
