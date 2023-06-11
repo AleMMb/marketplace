@@ -38,20 +38,20 @@ const productController = {
 
   agregar: async (req, res) => {
     try {
-      const { idUsuario, nombre, descripcion, precio, imagen } = req.body;
-      await addProduct(idUsuario, nombre, descripcion, precio, imagen);
+      const { id_usuario, nombre, descripcion, precio, imagen } = req.body;
+      await addProduct(id_usuario, nombre, descripcion, precio, imagen);
       res.send("Producto agregado exitosamente");
     } catch (error) {
-      res.status(error.code || 500).send(error.message);
+      res.status(500).send(error.message);
     }
   },
 
   eliminar: async (req, res) => {
     try {
-      const { id } = req.body;
+      const { id } = req.param;
       await deleteProduct(id);
       res.send("Producto eliminado con exito");
-    } catch {
+    } catch (error){
       res.status(error.code || 500).send(error.message);
     }
   },

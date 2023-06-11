@@ -5,9 +5,10 @@ const {
   registrarUsuario,
   verificarCredenciales,
 } = require("../services/user.services");
+
 const token_key = process.env.TOKENKEY;
 
-const indexController = {
+const userController = {
   mostrar: async (req, res) => {
     try {
       const Authorization = req.header("Authorization");
@@ -34,7 +35,7 @@ const indexController = {
     try {
       const { email, password } = req.body;
       await verificarCredenciales(email, password);
-      const token = jwt.sign({ email }, token_key); //  {expriresIn: 68400} duracion de 24hrs
+      const token = jwt.sign({ email }, token_key);
       res.send(token);
     } catch (error) {
       console.log(error);
@@ -54,4 +55,4 @@ const indexController = {
   },
 };
 
-module.exports = indexController;
+module.exports = userController;

@@ -2,9 +2,6 @@ const jwt = require("jsonwebtoken");
 const token_key = process.env.TOKENKEY
 
 
-/* para la implementación del midleware credenciales , que segun el desafío debía comprobar la existencia de la crenciales
-   (distinto a si son válidas o no, tuve que moificar la view Login en el front, porque esa comprobación ya estaba)
-   pero igual, creo que se entiende la idea de implementar un middleware :P */
 
 const credenciales = (req, res, next) => { 
   const { email, password } = req.body;  

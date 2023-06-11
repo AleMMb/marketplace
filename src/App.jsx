@@ -13,7 +13,8 @@ import Login from "./views/Login/Login";
 import Dashboard from "./views/dashboard/Dashboard";
 import SingUp from "./views/SingUp/SingUp";
 import DesProduct from "./views/DesProduct/DesProduct";
-import PersonalProducts from "./views/PersonalProducts/PersonalProducts"
+import PersonalProducts from "./views/PersonalProducts/PersonalProducts";
+import AddProduct from "./views/AddProduct/AddProduct"
 
 
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/carrito" element={<Cart />} />
             <Route path="/registro" element={<SingUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/nuevoproducto" element={<Private> <AddProduct/> </Private>} />
             <Route path="/perfil" element={<Private><Dashboard /></Private>}></Route>
             <Route path="/misproductos" element={<Private><PersonalProducts /></Private>}></Route>
             <Route path="*" element={<h1>Pagina no encontrada</h1>}/>

@@ -57,3 +57,23 @@ INSERT INTO producto VALUES(
     7990,
     'https://acortar.link/vQn4rw'
 );
+
+
+INSERT INTO producto VALUES(
+    DEFAULT,
+    1,
+    'cospus',
+    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,',
+    7990,
+    'https://acortar.link/zdJwYt'
+);
+
+
+INSERT INTO producto VALUES(
+    DEFAULT,
+    1,
+    'Orange flames',
+    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,',
+    4590,
+    'https://acortar.link/Hm7hsV'
+);

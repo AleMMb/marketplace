@@ -1,4 +1,30 @@
-.Personal-Products-container{
+
+.Personal-Products-container li{
+    width: 100%;
+    margin: 25px;
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.personal-product-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.personal-product-header h1{
+    font-size: 2.5rem;
+    color: #1c374d;
+}
+
+.personal-product-header button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #b1a961;
+    color: whitesmoke;
+    font-weight: bolder;
+    margin: 0px;
 }

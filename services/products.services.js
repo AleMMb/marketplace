@@ -25,9 +25,9 @@ const getProducto = async (id) =>{
 }
 
 
-const addProduct = async ( idUsuario, nombre, descripcion, precio, imagen) => {
+const addProduct = async ( id_usuario, nombre, descripcion, precio, imagen) => {
     const consulta = "INSERT INTO producto VALUES (DEFAULT, $1, $2, $3, $4, $5)"
-    const values = [idUsuario, nombre, descripcion, precio, imagen]
+    const values = [id_usuario, nombre, descripcion, precio, imagen]
     const result = await pool.query (consulta, values)
 }
 

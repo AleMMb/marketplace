@@ -1,9 +1,11 @@
 import { useState, useContext, useEffect } from "react";
 import { AuthContex } from "../../context/AuthContext";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 import CardPersonalProducts from "../../components/CardPersonalProducts/CardPersonalProducts"
-
+import "../PersonalProducts/PersonalProducts.css"
 
 
 
@@ -16,7 +18,6 @@ const PersonalProducts = () => {
         const urlServer = "http://localhost:3000";
         const endpoint = "/productos/";
         const id = usuario.id
-        console.log(usuario.id)
         try {
           const { data } = await axios.get(urlServer + endpoint + id);
           setProducts(data);
@@ -25,7 +26,6 @@ const PersonalProducts = () => {
         }
       };
      
-      console.log(products)
       useEffect(() => {
         getUseProducts();
       }, []);
@@ -34,8 +34,11 @@ const PersonalProducts = () => {
 
   return (
     <>
-    <h1>Mis Productos</h1>
-    <div className="">
+    <div className="personal-product-header">
+    <h1>Mis Productos Listados</h1>
+    <button><Link to="/nuevoproducto"> NUEVO</Link></button>
+    </div>
+    <div className="Personal-Products-container">
         {products.map((product)=>(
           <li key={product.id} >< CardPersonalProducts data={product} /></li>
          ))}
