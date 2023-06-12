@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className='home' style={{backgroundImage:`url(${hero})`}}>
         <div className='headerContainer'>
-          <h1>Estudio Pinguino</h1>
+          <h1>Estudio Pingüino</h1>
           <p>Pasión por el arte</p>
           <Link to='shop'>
             <button>Comprar</button>

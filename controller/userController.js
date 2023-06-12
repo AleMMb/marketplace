@@ -29,7 +29,7 @@ const userController = {
     } catch (error) {
       res.status(500).send(error.message);
     }
-  },
+  },  
 
   login: async (req, res) => {
     try {

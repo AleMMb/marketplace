@@ -11,6 +11,6 @@ router.get("/shop", productController.traer)
 router.get("/productos/:id_usuario", productController.traerPorUsuario)
 router.get("/producto", productController.traerPorId)
 router.post("/nuevoproducto", reporteProductoAgregado, productController.agregar)
-router.delete("/producto/:id", productController.eliminar)
+router.delete("/producto/:id", reporteProductoEliminado, productController.eliminar)
 
 module.exports = router;

@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 import { AuthContex } from "../../context/AuthContext";
 import "../AddProduct/AddProduct.css";
 
 const AddProduct = () => {
   const { usuario } = useContext(AuthContex);
+  const navigate = useNavigate();
   const [newProduct, setNewProduct] = useState({
     nombre: "",
     descripcion: "",
@@ -31,7 +34,15 @@ const AddProduct = () => {
       precio: newProduct.precio,
       imagen: newProduct.imagen,
     };
-    console.log(productDataArray);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Tu Producto a sido agregado exitosamente',
+      showConfirmButton: true,
+      timer: 5000
+    })
+    navigate("/misproductos")
+    //console.log(productDataArray);
 
     try {
       const response = await axios.post(urlServer, productDataArray);
@@ -43,7 +54,7 @@ const AddProduct = () => {
   return (
     <>
       <div className="addProductForm">
-        <label htmlFor="nombre">Nombre:</label>
+        <label htmlFor="nombre">Nombre del producto:</label>
         <input
           type="text"
           name="nombre"
@@ -70,7 +81,7 @@ const AddProduct = () => {
         />
 
         <label>
-          Descripcion:
+          Descripcion del producto:
           <textarea
             name="descripcion"
             rows={4}
@@ -86,4 +97,4 @@ const AddProduct = () => {
   );
 };
 export default AddProduct;
-//const { idUsuario, nombre, descripcion, precio, imagen } = req.body;
+

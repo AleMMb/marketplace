@@ -5,7 +5,7 @@ CREATE TABLE usuario (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR (50) NOT NULL,
     apellido VARCHAR (50) NOT NULL,
-    email VARCHAR(50) NOT NULL, 
+    email VARCHAR(50) UNIQUE NOT NULL, 
     password VARCHAR(150) NOT NULL 
 );
 
@@ -75,5 +75,14 @@ INSERT INTO producto VALUES(
     'Orange flames',
     'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,',
     4590,
-    'https://acortar.link/Hm7hsV'
+    'https://acortar.link/Hm7hsV' /// mala imagen 
 );
+
+
+Leopard
+
+ Animal print para todos los momentos.
+
+ 5990
+https://acortar.link/pA3DPB
+

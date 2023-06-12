@@ -32,5 +32,4 @@ const verificaToken = async (req, res, next) => {
 
 
 
-
 module.exports = {credenciales, verificaToken}

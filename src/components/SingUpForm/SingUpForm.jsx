@@ -45,8 +45,8 @@ function SingUp() {
     } catch (error) {
       Swal.fire({
         icon: 'error',
-        title: 'ERROR',
-        text: 'Algo salió mal por nuetra parte, intenta nuevamente más tarde',
+        title: 'Algo salió mal.',
+        text: 'El E-mail ya está registrado',
         backdrop: 'swal2-backdrop-hide',
         background: '#b1a961',
         color: '#1C374D'

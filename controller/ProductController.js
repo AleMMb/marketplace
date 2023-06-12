@@ -51,7 +51,6 @@ const productController = {
       const { id } = req.params;
       await deleteProduct(id);
       res.send("Producto eliminado con exito");
-      console.log("pasa")
     } catch (error){
       res.status(error.code || 500).send(error.message);
     }

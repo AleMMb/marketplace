@@ -35,7 +35,6 @@ const addProduct = async ( id_usuario, nombre, descripcion, precio, imagen) => {
 const deleteProduct = async (id) => {
     const consulta = "DELETE FROM producto WHERE id = $1"
     const values = [id]
-    console.log(id)
     const result = await pool.query (consulta, values)
 }
 
