@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 import "../CardPersonalProducts/CardPersonalProducts.css";
-import axios from "axios";
+
 
 const CardPersonalProducts = (info) => {
   const { id, nombre, descripcion, precio, imagen } = info.data;
@@ -28,7 +29,6 @@ const CardPersonalProducts = (info) => {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, elimmiar.'
     }).then((result) => {
-      //deletProduct (id)
       if (result.isConfirmed) {
         deletProduct (id)
         Swal.fire(
@@ -38,7 +38,7 @@ const CardPersonalProducts = (info) => {
         )
       } else {
         Swal.fire(
-          'cancelled',
+          'cancelado',
           `El producto ${nombre} está a salvo.`,
           'error'
         )

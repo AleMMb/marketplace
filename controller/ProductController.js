@@ -12,7 +12,7 @@ const productController = {
       const productos = await getProductos();
       res.status(200).send(productos);
     } catch (error) {
-      res.estatus(error.code || 500).send(error.message);
+      res.status(error.code || 500).send(error.message);
     }
   },
 
@@ -22,7 +22,7 @@ const productController = {
       const producto = await getProducto(id);
       res.status(200).send(producto);
       } catch (error) {
-        res.estatus(error.code || 500).send(error.message)
+        res.status(error.code || 500).send(error.message)
       }
   },
 

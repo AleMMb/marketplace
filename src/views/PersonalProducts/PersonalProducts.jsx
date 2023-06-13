@@ -9,9 +9,9 @@ import "../PersonalProducts/PersonalProducts.css"
 
 
 
+
 const PersonalProducts = () => {
     const {usuario} = useContext(AuthContex)
-
     const [products, setProducts] = useState([]);
 
     const getUseProducts = async () => {
