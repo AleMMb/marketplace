@@ -28,7 +28,7 @@ const PersonalProducts = () => {
      
       useEffect(() => {
         getUseProducts();
-      }, []);
+      }, [0]);
 
     
 

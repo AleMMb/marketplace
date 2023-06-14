@@ -38,4 +38,10 @@ const deleteProduct = async (id) => {
     const result = await pool.query (consulta, values)
 }
 
-module.exports = { getProductos, getProducto, addProduct, deleteProduct, getProductsByUser };
+const updateProduct = async (nombre,descripcion,precio, id) =>{
+    const consulta = "UPDATE producto SET nombre = $1, descripcion = $2, precio =$3 WHERE id = $4"
+    const values = [nombre, descripcion, precio, id]
+    const result = await pool.query(consulta, values)
+}
+
+module.exports = { getProductos, getProducto, addProduct, deleteProduct, getProductsByUser, updateProduct };

@@ -22,7 +22,7 @@ const AddProduct = () => {
     setNewProduct({ ...newProduct, ...field });
   };
 
-  console.log(newProduct);
+
 
   const newProductRegister = async () => {
     const urlServer = "http://localhost:3000/nuevoproducto";
@@ -38,14 +38,24 @@ const AddProduct = () => {
       position: 'top-end',
       icon: 'success',
       title: 'Tu Producto a sido agregado exitosamente',
-      showConfirmButton: true,
-      timer: 5000
+      showConfirmButton: true
     })
     navigate("/misproductos")
-    //console.log(productDataArray);
+
 
     try {
-      const response = await axios.post(urlServer, productDataArray);
+      if( !usuario.id || !newProduct.nombre || !newProduct.descripcion || !newProduct.precio || !newProduct.imagen){
+        Swal.fire({
+          position: 'top',
+          icon: 'error',
+          title: 'Todo los campos son requeridos',
+          showConfirmButton: true,
+          timer: 5000
+        }) 
+        navigate("/nuevoproducto")
+      }else{
+        const response = await axios.post(urlServer, productDataArray);
+      }
     } catch (error) {
       console.log(error.response);
     }

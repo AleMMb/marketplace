@@ -51,12 +51,6 @@ function SingUp() {
         background: '#b1a961',
         color: '#1C374D'
     })
-
-
-
-
-
-      //alert("Algo salió mal ...");
       console.log(error);
     }
   };

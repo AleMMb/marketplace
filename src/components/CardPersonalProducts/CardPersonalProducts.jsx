@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import axios from "axios";
 
@@ -7,12 +8,12 @@ import "../CardPersonalProducts/CardPersonalProducts.css";
 
 const CardPersonalProducts = (info) => {
   const { id, nombre, descripcion, precio, imagen } = info.data;
+  const navigate = useNavigate();
 
   const deletProduct = async (id) => {
     const urlServer = "http://localhost:3000/producto/";
     try {
       const consulta  = await axios.delete(urlServer + id);
-      console.log(consulta)
     } catch (error) {
       console.log(error);
     }
@@ -36,6 +37,7 @@ const CardPersonalProducts = (info) => {
           'El producto ha sido eliminado de tu lista',
           'success'
         )
+        
       } else {
         Swal.fire(
           'cancelado',

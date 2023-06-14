@@ -3,7 +3,8 @@ const {
   getProducto,
   addProduct,
   deleteProduct,
-  getProductsByUser
+  getProductsByUser,
+  updateProduct
 } = require("../services/products.services");
 
 const productController = {
@@ -18,7 +19,7 @@ const productController = {
 
   traerPorId: async (req, res) => {
     try {
-      const id = req.body.id;
+      const id = req.params.id;
       const producto = await getProducto(id);
       res.status(200).send(producto);
       } catch (error) {
@@ -55,6 +56,16 @@ const productController = {
       res.status(error.code || 500).send(error.message);
     }
   },
+
+  modificar: async (req, res) =>{
+    try{
+      const {nombre, descripcion, precio, id} = req.body;
+      await updateProduct(nombre,descripcion,precio,id);
+      res.send(`El producto ${id} ha sido modificado`);
+      }catch(error){
+        res.status(500).send(error.message);
+      }
+  }
 };
 
 module.exports = productController;

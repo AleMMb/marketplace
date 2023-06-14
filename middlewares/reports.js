@@ -13,44 +13,57 @@ const reporteLogin = (req, res, next) => {
 
 
 const reporteUsuarioCreado = (req, res, next) => {
-    const parametros = req.body.email;
-    const url = req.url;
-    console.log(
-      `
+  const parametros = req.body.email;
+  const url = req.url;
+  console.log(
+    `
       Hoy ${new Date()}
       Se ha recibido una consulta (POST) en la ruta ${url}
       se a creado el registro del usuario:`,
-      parametros
-    );
-  
-    next();
-  };
+    parametros
+  );
+
+  next();
+};
 
 
-  const reporteProductoAgregado = (req, res, next) =>{
-    const parametros = req.body.nombre;
-    const url = req.url;
-    console.log(
-      `Hoy ${new Date()}
+const reporteProductoAgregado = (req, res, next) => {
+  const parametros = req.body.nombre;
+  const url = req.url;
+  console.log(
+    `Hoy ${new Date()}
        Se ha recibido una consulta (POST) en la ruta ${url} 
-       se a agregado el producto:`, parametros 
-    )
-    next();
-  }
+       se a agregado el producto:`, parametros
+  )
+  next();
+}
 
-  const reporteProductoEliminado = (req, res, next) =>{
-    const parametros = req.params.id;
-    const url = req.url;
-    console.log(
-      `Hoy ${new Date()}
+const reporteProductoEliminado = (req, res, next) => {
+  const parametros = req.params.id;
+  const url = req.url;
+  console.log(
+    `Hoy ${new Date()}
       Se ha recibido una consulta (DELETE) en la ruta ${url}
       Se ha eliminado el producto con la ID`, parametros
-      )
-      next();
-  }
+  )
+  next();
+}
 
-module.exports = { 
-  reporteLogin, 
+const reporteProductoModificado = (req, res, next)=>{
+  const parametros=req.body;
+  const id=req.body.id;
+  const url=req.url;
+  console.log(`Hoy ${new Date()}
+  Se ha recibido una consulta (PATCH) en la ruta ${url}
+  El producto con Id:${id}, fue modificado por los siguientes datos: `,parametros
+  );
+  next();
+}
+
+module.exports = {
+  reporteLogin,
   reporteUsuarioCreado,
   reporteProductoAgregado,
-  reporteProductoEliminado}
+  reporteProductoEliminado,
+  reporteProductoModificado
+}
