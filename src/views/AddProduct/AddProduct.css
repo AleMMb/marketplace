@@ -29,3 +29,8 @@ margin: 2em auto;
     background-color: rgba(28, 55, 77, 0);
     
 }
+
+.upload-image-button{
+    margin-top: 0%;
+    margin-bottom: 30px;
+}

@@ -22,9 +22,13 @@
 }
 
 .personal-product-header button{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #b1a961;
-    color: whitesmoke;
+    color: #1c374d;
     font-weight: bolder;
     margin: 0px;
+}
+
+.link{
+    text-decoration: none;
+    color: #1c374d
 }

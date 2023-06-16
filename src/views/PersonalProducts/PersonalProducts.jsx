@@ -36,7 +36,7 @@ const PersonalProducts = () => {
     <>
     <div className="personal-product-header">
     <h1>Mis Productos Listados</h1>
-    <button><Link to="/nuevoproducto"> NUEVO</Link></button>
+    <button><Link className="link" to="/nuevoproducto">NUEVO</Link></button>
     </div>
     <div className="Personal-Products-container">
         {products.map((product)=>(
