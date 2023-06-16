@@ -1,0 +1,21 @@
+.description-container{
+    background-color: #f1f1f1;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+    height: 81vh;
+
+}
+
+.description-container img{
+    width:40%;
+   
+}
+
+.description-container h1{
+    font-size: 5rem;    
+}
+
+.details{
+    padding: 25px;
+}

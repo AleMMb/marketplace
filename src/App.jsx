@@ -15,6 +15,8 @@ import SingUp from "./views/SingUp/SingUp";
 import DesProduct from "./views/DesProduct/DesProduct";
 import PersonalProducts from "./views/PersonalProducts/PersonalProducts";
 import AddProduct from "./views/AddProduct/AddProduct"
+import NotFound from "./views/NotFound/NotFound";
+import EditForm from "./components/EditForm/EditForm";
 
 
 
@@ -39,7 +41,8 @@ function App() {
             <Route path="/nuevoproducto" element={<Private> <AddProduct/> </Private>} />
             <Route path="/perfil" element={<Private><Dashboard /></Private>}></Route>
             <Route path="/misproductos" element={<Private><PersonalProducts /></Private>}></Route>
-            <Route path="*" element={<h1>Pagina no encontrada</h1>}/>
+            <Route path="/editar/:id" element={<Private><EditForm /></Private>}></Route>
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
           </ShopContextProvider>
           </AuthContextProvider>

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import axios from "axios";
 
 import "../CardPersonalProducts/CardPersonalProducts.css";
+import EditForm from "../EditForm/EditForm";
 
 
 const CardPersonalProducts = (info) => {
@@ -57,9 +58,9 @@ const CardPersonalProducts = (info) => {
         <b>{precio}</b>
       </div>
       <div className="actions">
-        <Link to={""}>
-          <button>Editar</button>
-        </Link>
+        
+          <button onClick={()=>{navigate(`/editar/${id}`)}}>Editar</button>
+       
         <button
           onClick={() => {
             SweetAlert();

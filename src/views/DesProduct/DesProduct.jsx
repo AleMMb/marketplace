@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { formatPrice } from "../../helpers/helper";
+import ("../DesProduct/DesProduct.css")
 
 const DesProduct = () => {
 
@@ -13,7 +14,6 @@ const DesProduct = () => {
     const urlServer = "http://localhost:3000/producto/";
     try{
       const {data}  = await axios.get(urlServer + id)
-      //const data = await response.json();
       setProduct (data[0])
     } catch(error){
       console.log(error)
@@ -30,14 +30,13 @@ const DesProduct = () => {
     <div className="description-container">
         <img src={product.imagen} alt={product.nombre} />
         <div className="details">
-            <p>{product.nombre}</p>
-            <p> ${product.precio}</p>
-        </div>
-        <div className="description-product">
+            <h1>{product.nombre}</h1>
+            <p> <b>${product.precio}</b></p>
+            <div className="description-product">
             <p> {product.descripcion}</p>
+            <Link to={'/shop'}><button>Volver a la tienda</button></Link>
         </div>
-        <Link to={'/shop'}><button>Volver a la tienda</button></Link>
-        <button>Agregar al carrito</button>
+        </div>
 
     </div>
     </>
