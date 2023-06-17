@@ -18,7 +18,7 @@ const EditForm = () => {
   };
 
   const getProduct = async () => {
-    const urlServer = "http://localhost:3000/producto/";
+    const urlServer = "https://marketplace-alemmb.vercel.app/producto/";
     try {
       const { data } = await axios.get(urlServer + id);
       setProduct(data[0]);
@@ -32,7 +32,7 @@ const EditForm = () => {
   }, []);
 
   const editProductfunction = async () => {
-    const urlServer = "http://localhost:3000/producto/";
+    const urlServer = "https://marketplace-alemmb.vercel.app/producto/";
     const newInfo = {
       id: id,
       nombre: editProduct.nombre,

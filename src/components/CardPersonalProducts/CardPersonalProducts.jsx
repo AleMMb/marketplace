@@ -12,7 +12,7 @@ const CardPersonalProducts = (info) => {
   const navigate = useNavigate();
 
   const deletProduct = async (id) => {
-    const urlServer = "http://localhost:3000/producto/";
+    const urlServer = "https://marketplace-alemmb.vercel.app/producto/";
     try {
       const consulta  = await axios.delete(urlServer + id);
     } catch (error) {

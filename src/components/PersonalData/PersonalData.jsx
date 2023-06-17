@@ -8,7 +8,7 @@ function PersonalData() {
   const [usuario, setUsuarioLocal] = useState({});
 
   const getUserData = async () => {
-    const urlServer = "http://localhost:3000";
+    const urlServer = "https://marketplace-alemmb.vercel.app";
     const endpoint = "/usuarios/";
     const token = localStorage.getItem("token");
     try {

@@ -15,7 +15,7 @@ const PersonalProducts = () => {
     const [products, setProducts] = useState([]);
 
     const getUseProducts = async () => {
-        const urlServer = "http://localhost:3000";
+        const urlServer = "https://marketplace-alemmb.vercel.app";
         const endpoint = "/productos/";
         const id = usuario.id
         try {

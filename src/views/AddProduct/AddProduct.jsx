@@ -75,7 +75,7 @@ const AddProduct = () => {
   };
 
   const newProductRegister = async () => {
-    const urlServer = "http://localhost:3000/nuevoproducto";
+    const urlServer = "https://marketplace-alemmb.vercel.app/nuevoproducto";
 
     var productDataArray = {
       id_usuario: usuario.id,
