@@ -18,7 +18,7 @@ function SingUp() {
   };
 
   const userRegistrer = async () => {
-    const urlServer = "http://localhost:3000";
+    const urlServer = "https://marketplace-alemmb.vercel.app";
     const endpoint = "/usuarios";
     try {
       if ( !user.nombre || !user.apellido || !user.email || !user.password)

@@ -23,7 +23,7 @@ function Login() {
 
 
   const iniciarSesion = async () => {
-    const urlServer = "http://localhost:3000";
+    const urlServer = "https://marketplace-alemmb.vercel.app";
     const endpoint = "/login";
     const { email, password } = usuario;
     try {

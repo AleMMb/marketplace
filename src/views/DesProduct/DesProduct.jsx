@@ -11,7 +11,7 @@ const DesProduct = () => {
   console.log(id)
 
   const getProduct = async()=>{
-    const urlServer = "http://localhost:3000/producto/";
+    const urlServer = "https://marketplace-alemmb.vercel.app/producto/";
     try{
       const {data}  = await axios.get(urlServer + id)
       setProduct (data[0])

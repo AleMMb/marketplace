@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+
 const {
   getUsuario,
   getUsuarioID,
@@ -6,7 +7,7 @@ const {
   verificarCredenciales,
 } = require("../services/user.services");
 
-const token_key = process.env.TOKENKEY;
+const token_key = process.env.NEXT_PUBLIC_TOKENKEY;
 
 const userController = {
   mostrar: async (req, res) => {
@@ -33,6 +34,7 @@ const userController = {
 
   login: async (req, res) => {
     try {
+      console.log(token_key)
       const { email, password } = req.body;
       await verificarCredenciales(email, password);
       const token = jwt.sign({ email }, token_key);

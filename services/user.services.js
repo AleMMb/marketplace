@@ -1,6 +1,7 @@
 const pool = require("../database/connection");
 const bcrypt = require("bcryptjs");
 
+
 const getUsuario = async (email) => {
   const consulta = "SELECT * FROM usuario WHERE email = $1";
   const values = [email];

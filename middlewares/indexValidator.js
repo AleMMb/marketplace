@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-const token_key = process.env.TOKENKEY
+
+const token_key = process.env.NEXT_PUBLIC_TOKENKEY
 
 
 

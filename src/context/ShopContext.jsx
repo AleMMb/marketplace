@@ -15,10 +15,8 @@ export const ShopContextProvider = (props) => {
   const [productsList, setProductsList] = useState([]);
 
   const getProductos = async () => {
-    const urlServer = "http://localhost:3000";
-    const endpoint = "/shop";
     try {
-      const response = await fetch(urlServer + endpoint);
+      const response = await fetch("https://marketplace-alemmb.vercel.app/shop");
       const productos = await response.json();
       setProductsList(productos);
     } catch (error) {
