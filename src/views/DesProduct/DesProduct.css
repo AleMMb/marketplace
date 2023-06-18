@@ -4,13 +4,18 @@
     padding: 2rem;
     justify-content: space-evenly;
     height: 81vh;
-
+    overflow: hidden;
 }
 
 .description-container img{
     width:40%;
-   
+    transition: 0.5s all ease-in-out;
 }
+
+.description-container img:hover{
+    transform: scale(1.5);
+}
+
 
 .description-container h1{
     font-size: 5rem;    
@@ -18,4 +23,8 @@
 
 .details{
     padding: 25px;
+}
+
+.precio{
+    color: #f9bd0b;
 }

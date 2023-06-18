@@ -6,7 +6,7 @@
   flex-direction: column;
   width: 50%;
   align-items: center;
-  background:rgba(177, 169, 97, 0.66);
+  background: #f9bd0bbe;/*rgba(177, 169, 97, 0.66);*/
   color: #1c374d;
 }
 

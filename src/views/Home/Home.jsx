@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import videobg from "../../assets/videobg.mp4"
 import '../Home/Home.css'
-import hero from '../../assets/HEROclay.jpg'
 import Footer from "../../components/Footer/Footer"
 
 function Home() {
   return (
-    <div className='home' style={{backgroundImage:`url(${hero})`}}>
+    <div className='home'>
+      <div className="overlay"></div>
+        <video src={videobg} autoPlay loop muted />
         <div className='headerContainer'>
           <h1>Estudio Pingüino</h1>
           <p>Pasión por el arte</p>

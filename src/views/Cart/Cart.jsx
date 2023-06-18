@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../../context/ShopContext";
+
+import { formatPrice } from "../../helpers/helper";
 import { CartItem } from "../../components/Card-item/Cart-item";
 import "../Cart/Cart.css";
 
@@ -31,7 +33,7 @@ function Cart() {
       {totalAmount > 0 ? (
         <div className="checkout">
           <h2>
-            <b>Subtotal:</b> ${totalAmount}
+            <b>Subtotal:</b> ${formatPrice(totalAmount)}
           </h2>
           <button onClick={() => navigate("/shop")}>Seguir Comprando</button>
           <button className="checkout-button">Pagar</button>

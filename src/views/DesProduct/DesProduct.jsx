@@ -8,7 +8,6 @@ const DesProduct = () => {
 
   const [product, setProduct] = useState([]);
   const { id } = useParams();
-  console.log(id)
 
   const getProduct = async()=>{
     const urlServer = "https://marketplace-alemmb.vercel.app/producto/";
@@ -20,10 +19,10 @@ const DesProduct = () => {
     }
   }
 
+
   useEffect(() => {
     getProduct ();
   }, []);
- console.log(product)
 
   return (
     <>
@@ -31,7 +30,6 @@ const DesProduct = () => {
         <img src={product.imagen} alt={product.nombre} />
         <div className="details">
             <h1>{product.nombre}</h1>
-            <p> <b>${product.precio}</b></p>
             <div className="description-product">
             <p> {product.descripcion}</p>
             <Link to={'/shop'}><button>Volver a la tienda</button></Link>

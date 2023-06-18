@@ -6,7 +6,6 @@
 .ShopTitle {
   font-family: "Nothing You Could Do", cursive;
   color: #1c374d;
-  margin-top: 100px;
   text-align: center;
   font-size: 40px;
 }
@@ -17,33 +16,4 @@
   justify-content: center;
 }
 
-.product img {
-  width: 250px;
-  height: 250px;
-}
 
-.product .description {
-  text-align: center;
-}
-
-.product:hover {
-  transition: 0.3s ease-in;
-  cursor: pointer;
-}
-
-.addToCartBttn {
-  background-color: transparent;
-  border: 2px solid #1c374d;
-  min-width: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 15px;
-}
-
-.addToCartBttn:hover {
-  background-color: #1c374d;
-  color: white;
-  cursor: pointer;
-}

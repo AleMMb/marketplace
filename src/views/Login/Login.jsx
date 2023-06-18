@@ -58,7 +58,7 @@ function Login() {
         title: 'Oops...',
         text: 'Algo salió mal, contraseña inválida',
         backdrop: 'swal2-backdrop-hide',
-        background: '#b1a961',
+        background: '#ffc107',
         color: '#1C374D'
     })
       console.log(error);

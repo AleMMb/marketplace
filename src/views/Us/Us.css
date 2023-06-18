@@ -20,8 +20,14 @@
 
 .socialMedia svg {
   cursor: pointer;
-  color: #1c374d;
+  color: #f9bd0b;
   margin: 20px;
   font-size: 70px;
   cursor: pointer;
+}
+
+.socialMedia svg :hover {
+
+  color: #1c374d;
+
 }

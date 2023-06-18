@@ -26,6 +26,10 @@
   justify-content: center;
 }
 
+.navbar .rightSide :hover{
+  color: #1c374d;
+}
+
 .navbar .public{
   height: 100%;
   display: flex;
@@ -41,10 +45,13 @@
 
 .navbar .rightSide button {
   background-color: transparent;
+  margin: 0%;
   border: none;
   color: white;
   cursor: pointer;
 }
+
+
 
 .navbar .rightSide svg {
   font-size: 40px;

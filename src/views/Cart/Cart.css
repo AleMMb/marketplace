@@ -3,11 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .cart-title{
   font-family: 'Nothing You Could Do', cursive;
-  color: #948e52;
+  color: #ffc107;
   font-size: 1.6rem;
   text-align: center;
 
@@ -23,7 +25,7 @@ align-items: center;
 
 .checkout {
   width: 100%;
-  padding: 8px;
+  padding-bottom: 15px;
   background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@ align-items: center;
 .cartItem button {
   width: 90px;
   height: 45px;
-  border-radius: 15px;
+  border-radius: 10%;
   border: none;
   background-color: #ffc107;
   color: #1c374d;

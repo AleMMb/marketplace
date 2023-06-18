@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import axios from "axios";
 
+import { formatPrice } from "../../helpers/helper";
 import "../CardPersonalProducts/CardPersonalProducts.css";
 import EditForm from "../EditForm/EditForm";
 
@@ -55,7 +56,7 @@ const CardPersonalProducts = (info) => {
       <div className="Product-description">
         <h3>{nombre}</h3>
         <p>{descripcion}</p>
-        <b>{precio}</b>
+        <b>${formatPrice(precio)}</b>
       </div>
       <div className="actions">
         

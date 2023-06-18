@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react';
 import { ShopContext } from "../../context/ShopContext";
+import { formatPrice } from "../../helpers/helper";
 
 export const CartItem = (props) => {
   
@@ -12,7 +13,7 @@ export const CartItem = (props) => {
         <img src={imagen} alt="producto" />
         <div className='description'>
             <p><b>{nombre}</b></p>
-            <p> Precio: ${precio} c/u</p>
+            <p> Precio: ${formatPrice(precio)} c/u</p>
             <div className='countHandler'>
                 <button onClick={()=> removeFromCart(id)}>-</button>
                 <input value={cartItems[id]} onChange={(e) => updateCartItemCount(Number(e.target.value), id)}/>
