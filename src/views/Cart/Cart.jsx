@@ -22,7 +22,7 @@ function Cart() {
         {productsList.map((product) => {
           if (cartItems[product.id] !== 0) {
             return (
-              <li key={product.id}>
+              <li className="list-cart-products" key={product.id}>
                 <CartItem data={product} />
               </li>
             );

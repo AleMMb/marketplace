@@ -17,7 +17,7 @@ function Card (props){
 
   return (
     <div className='product-card'>
-        <img onClick={() => navigate(`/descripcion/${id}`)} src={imagen}/>
+        <img className='product-cart-image' onClick={() => navigate(`/descripcion/${id}`)} src={imagen}/>
         <div className='description'>
             <p className='product-title'>{nombre}</p>
             <p className='product-price'>${formatPrice(precio)}</p>

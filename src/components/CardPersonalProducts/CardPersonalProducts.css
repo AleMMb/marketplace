@@ -10,10 +10,11 @@
     
 }
 
-.personal-product-container img{
+.image-card-personal{
 width: 250px;
 height: 250px;
-    }
+border-radius: 0%;
+}
 
 .Product-description{
     width: 50%;

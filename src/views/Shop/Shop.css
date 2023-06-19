@@ -5,15 +5,34 @@
 }
 .ShopTitle {
   font-family: "Nothing You Could Do", cursive;
+  display: flex;
+  flex-direction: row;
   color: #1c374d;
   text-align: center;
   font-size: 40px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .products {
   height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.h5-search{
+margin: 0%;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: small;
+}
+
+.input-search{
+  height: 10px;
 }
 
 

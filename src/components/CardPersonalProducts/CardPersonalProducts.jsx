@@ -52,7 +52,7 @@ const CardPersonalProducts = (info) => {
 
   return (
     <div className="personal-product-container">
-      <img src={imagen} alt="" />
+      <img className="image-card-personal" src={imagen} alt={nombre} />
       <div className="Product-description">
         <h3>{nombre}</h3>
         <p>{descripcion}</p>

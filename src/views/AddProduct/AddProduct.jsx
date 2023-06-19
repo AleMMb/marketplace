@@ -41,7 +41,7 @@ const AddProduct = () => {
         // Observe state change events such as progress, pause, and resume
         switch (snapshot.state) {
           case "running":
-            console.log("subiendo");
+          console.log("subiendo")
           
           case "success": 
           Swal.fire({
@@ -51,7 +51,7 @@ const AddProduct = () => {
       showConfirmButton: true,
     });
 
-            break;  
+          break;  
           case "error":
             
               Swal.fire({

@@ -20,14 +20,14 @@
     overflow: hidden;
 }
 
-img {
+.product-cart-image {
   width: 100%;
   object-fit: fill;
   border-radius: 1rem;
   cursor: pointer;
 }
 
- img:hover{
+ .product-cart-image:hover{
   transition: 0.3s ease-out;
   filter: brightness(70%); 
 }
@@ -67,4 +67,9 @@ img {
   background-color: #1c374d;
   color: white;
   cursor: pointer;
+}
+
+
+li{
+  width: 360px;
 }

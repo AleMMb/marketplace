@@ -4,16 +4,22 @@
     padding: 2rem;
     justify-content: space-evenly;
     height: 81vh;
-    overflow: hidden;
+    
 }
 
-.description-container img{
-    width:40%;
-    transition: 0.5s all ease-in-out;
+.image-container{
+    overflow: hidden;
+    width: 40%;
+}
+
+.imagen-desProducts{
+    overflow: hidden;
+    height: fit-content;
+    transition: 1s;
 }
 
 .description-container img:hover{
-    transform: scale(1.5);
+    transform: scale(1.6);
 }
 
 

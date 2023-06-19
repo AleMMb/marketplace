@@ -50,20 +50,20 @@ function Us() {
           no te estás suscribiando a nada, no te enviaremos emails molestos y no
           requiere estar registrado.
         </p>
-        <label>Name</label>
-        <input type="text" name="user_name"  placeholder="Ej: nombre apellido" required/>
-        <label>Email</label>
-        <input type="email" name="user_email" placeholder="nombre@mail.com" required />
-        <label>Message</label>
+        <label>Tu nombre:</label>
+        <input type="text" name="user_name" required/>
+        <label>Email:</label>
+        <input type="email" name="user_email" required />
+        <label>Mensaje:</label>
         <textarea name="message" rows={4} cols={50} required/> 
         <button>Enviar</button>
       </form>
 
       <div className="socialMedia">
-        <InstagramIcon />
-        <TwitterIcon />
-        <FacebookIcon />
-        <LinkedInIcon />
+        <a href="https://www.instagram.com/" target="_blank"><InstagramIcon /></a>
+        <a href="https://twitter.com/" target="_blank"><TwitterIcon /></a>
+        <a href="https://es-la.facebook.com/" target="_blank"><FacebookIcon /></a>
+        <a href="https://www.linkedin.com/" target="_blank"><LinkedInIcon /></a>
       </div>
     </div>
   );
