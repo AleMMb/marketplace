@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { formatPrice } from "../../helpers/helper";
 import "../CardPersonalProducts/CardPersonalProducts.css";
-import EditForm from "../EditForm/EditForm";
+
 
 
 const CardPersonalProducts = (info) => {
@@ -39,6 +39,7 @@ const CardPersonalProducts = (info) => {
           'El producto ha sido eliminado de tu lista',
           'success'
         )
+        navigate("/misproductos");
         
       } else {
         Swal.fire(

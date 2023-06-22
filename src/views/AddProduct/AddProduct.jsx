@@ -84,13 +84,7 @@ const AddProduct = () => {
       precio: newProduct.precio,
       imagen: urlProductImage,
     };
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Tu producto ya está disponible! ",
-      showConfirmButton: true,
-    });
-    navigate("/misproductos");
+  
 
     try {
       if (
@@ -110,6 +104,13 @@ const AddProduct = () => {
         navigate("/nuevoproducto");
       } else {
         const response = await axios.post(urlServer, productDataArray);
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Tu producto ya está disponible! ",
+          showConfirmButton: true,
+        });
+        navigate("/misproductos");
       }
     } catch (error) {
       console.log(error.response);

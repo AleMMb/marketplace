@@ -21,6 +21,17 @@ CREATE TABLE producto (
     CONSTRAINT fk_productos_usuario FOREIGN KEY (id_usuario) REFERENCES usuario (id)
 );
 
+
+CREATE TABLE direccion (
+    id_usuario SERIAL,
+    calle VARCHAR (40),
+    numero INTEGER,
+    comuna VARCHAR (40),
+    region VARCHAR (40),
+    CONSTRAINT fk_direccion_usuario FOREIGN KEY(id_usuario) REFERENCES usuario (id)
+);
+
+
 INSERT INTO producto VALUES(
     1,
     3,
