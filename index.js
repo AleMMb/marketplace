@@ -15,10 +15,10 @@ app.listen(3000, console.log(`Server corriendo en el puerto ${port}`))
 app.use(cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization","Access-Control-Allow-Origin"],
     credentials: true,
-    preflightContinue: true,
-  }))
+    preflightContinue:true,
+}))
 app.use(express.json())
 app.use(express.static('public'))
 app.use('/', userRoutes)
