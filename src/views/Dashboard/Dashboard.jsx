@@ -17,8 +17,8 @@ const [mostrar, setMostrar] = useState("")
       <div className="left-side">
       <h1>Mi cuenta</h1>
         <Avatar alt="my pic" src={avatar} sx={{ width: 200, height: 200 }} />
-        <button on onClick={()=> setMostrar (true)}><Link to={PersonalData}/>Datos Personales</button>
-        <button on onClick={()=> setMostrar (false)}><Link to={AdressData}/>Direccion</button>
+        <button on onClick={()=> setMostrar (false)}><Link to={PersonalData}/>Datos Personales</button>
+        <button on onClick={()=> setMostrar (true)}><Link to={AdressData}/>Direccion</button>
       </div>
 
      
