@@ -14,7 +14,7 @@ const port = process.env.PORT || 3001
 app.listen(3000, console.log(`Server corriendo en el puerto ${port}`))
 app.use(cors({
     origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization","Access-Control-Allow-Origin"],
     credentials: true,
     preflightContinue:true,
