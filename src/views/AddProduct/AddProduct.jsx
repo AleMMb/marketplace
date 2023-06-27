@@ -41,26 +41,27 @@ const AddProduct = () => {
         // Observe state change events such as progress, pause, and resume
         switch (snapshot.state) {
           case "running":
-          console.log("subiendo")
+          console.log("subiendo");
+          
           
           case "success": 
           Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "La imagen se ha subido con exito!",
-      showConfirmButton: true,
-    });
-
+              position: "top-end",
+              icon: "success",
+              title: "La imagen se ha subido con exito!",
+              showConfirmButton: true,
+          });
           break;  
+
           case "error":
-            
               Swal.fire({
                 position: "top",
                 icon: "error",
                 title: "Oops! intenta nuevamente",
                 showConfirmButton: true,
                 timer: 5000,
-              })
+              }) 
+              break
             }
       },
       (error) => {
