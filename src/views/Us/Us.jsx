@@ -6,6 +6,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
 function Us() {
   const refForm = useRef();
 
@@ -18,8 +20,15 @@ function Us() {
 
     emailjs
       .sendForm(serviceID, templateID, refForm.current, apiKey)
-      .then((result) => console.log(result.text))
-      .catch((error) => console.error(error));
+      .then((result) => console.log(result.text));
+    refForm.current.reset();
+    Swal.fire({
+      icon: "success",
+      title: "Tu mensaje fue enviado",
+      text: "Muchas gracias por comunicarte con nosotros, en breve responderemos tus consultas.",
+      backdrop: "swal2-backdrop-hide",
+      color: "#1C374D",
+    }).catch((error) => console.error(error));
   };
 
   return (
@@ -43,27 +52,42 @@ function Us() {
         dissolvere metalli petram, vitrum, tellus. Ita quod illic '.
       </p>
 
-      <form ref={refForm} action="" className="contact-us-form" onSubmit={handleSubmit}>
+      <form
+        ref={refForm}
+        action=""
+        className="contact-us-form"
+        onSubmit={handleSubmit}
+      >
         <h3>Contáctanos</h3>
-        <p className="info">Envianos tus dudas, y tendrás respuesta en breve.</p>
+        <p className="info">
+          Envianos tus dudas, y tendrás respuesta en breve.
+        </p>
         <p className="adv">
           no te estás suscribiando a nada, no te enviaremos emails molestos y no
           requiere estar registrado.
         </p>
         <label>Tu nombre:</label>
-        <input type="text" name="user_name" required/>
+        <input type="text" name="user_name" required />
         <label>Email:</label>
         <input type="email" name="user_email" required />
         <label>Mensaje:</label>
-        <textarea name="message" rows={4} cols={50} required/> 
+        <textarea name="message" rows={4} cols={50} required />
         <button>Enviar</button>
       </form>
 
       <div className="socialMedia">
-        <a href="https://www.instagram.com/" target="_blank"><InstagramIcon /></a>
-        <a href="https://twitter.com/" target="_blank"><TwitterIcon /></a>
-        <a href="https://es-la.facebook.com/" target="_blank"><FacebookIcon /></a>
-        <a href="https://www.linkedin.com/" target="_blank"><LinkedInIcon /></a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <InstagramIcon />
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <TwitterIcon />
+        </a>
+        <a href="https://es-la.facebook.com/" target="_blank">
+          <FacebookIcon />
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <LinkedInIcon />
+        </a>
       </div>
     </div>
   );
